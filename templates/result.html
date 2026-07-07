@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Prediction Result</title>
+
+    <link rel="stylesheet" href="{{ url_for('static',filename='style.css') }}">
+
+</head>
+
+<body>
+
+    <div class="container result">
+
+        <h1>Prediction Result</h1>
+
+        {% if "High" in prediction %}
+
+        <h2 class="high">
+            ⚠️ {{ prediction }}
+        </h2>
+
+        {% else %}
+
+        <h2 class="low">
+            ✅ {{ prediction }}
+        </h2>
+
+        {% endif %}
+
+        <a href="/">
+            Predict Again
+        </a>
+
+        <div class="footer">
+
+            Flood Prediction using Machine Learning
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>
